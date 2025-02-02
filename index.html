@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            transition: background-color 0.3s ease-in-out;
+        }
+        header {
+            background-color: #1a73e8;
+            color: #fff;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            padding: 50px 0;
+            transition: transform 0.3s;
+        }
+        section:hover {
+            transform: scale(1.02);
+        }
+        .about, .skills, .education, .hobbies, .contact {
+            text-align: center;
+        }
+        .about p, .hobbies p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            font-size: 1.1rem;
+            padding: 10px;
+            background: #e3f2fd;
+            margin: 5px auto;
+            width: 50%;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .skills li:hover {
+            background: #bbdefb;
+        }
+        .education {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 40px 0;
+            border-radius: 10px;
+        }
+        .education ul {
+            list-style: none;
+            padding: 0;
+        }
+        .education ul li {
+            padding: 10px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .education ul li:hover {
+            color: #1a73e8;
+        }
+        .hobbies {
+            background: #f1f8e9;
+            padding: 40px 0;
+            border-radius: 10px;
+        }
+        .hobbies ul {
+            list-style: disc;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 700px;
+            padding-left: 20px;
+        }
+        .hobbies .toggle {
+            cursor: pointer;
+            color: #1a73e8;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        .hobbies .toggle:hover {
+            color: #ff5722;
+        }
+        .contact {
+            background-color: #e3f2fd;
+            padding: 50px 0;
+            border-radius: 10px;
+        }
+        .contact .contact-info {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: auto;
+            text-align: left;
+        }
+        .contact .contact-info p {
+            margin: 10px 0;
+        }
+        .contact .contact-info a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact .contact-info a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /*  Styling for the Toggle Section */
+        .hobbies #hobby-details {
+            /* list-style: none; */
+            padding: 0;
+            text-align: left;
+            /* margin-top: 20px; */
+            display: none; /* Hide initially */
+        }
+        .hobbies #hobby-details li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello! I am an aspiring web developer passionate about creating visually appealing and interactive websites. I have experience with front-end and back-end technologies and am constantly improving my skills in modern web development.</p>
+            </div>
+        </section>
+        
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Skills & Experience</h2>
+                <ul>
+                    <li>HTML - Expert</li>
+                    <li>CSS - Advanced</li>
+                    <li>JavaScript - Intermediate</li>
+                    <li>React.js - Intermediate</li>
+                    <li>Node.js - Beginner</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="education" class="education">
+            <div class="container">
+                <h2>Education</h2>
+                <ul>
+                    <li>MSc in Computer Science, University Of Law</li>
+                    <li>Full-Stack Web Development Certification, Udemy</li>
+                    <li>Mathematics For Datascience, Udemy</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="hobbies" class="hobbies">
+            <div class="container">
+                <h2>Hobbies & Interests</h2>
+                <ul>
+                    <li>Painting - Experimenting with vibrant colors and styles.</li>
+                    <li>Traveling - Exploring new cultures and places.</li>
+                    <li>Reading - Diving into books to inspire creativity and knowledge.</li>
+                    <ul id="hobby-details" style="display: none;">
+                        <li>I am an avid painter who loves experimenting with colors.</li>
+                        <li>Traveling allows me to learn about new cultures, and reading inspires my creativity!</li>
+                    </ul>
+                </ul>
+                
+                
+                <p class="toggle" onclick="toggleDetails()">Show more...</p>
+            </div>
+        </section>
+        
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:zain.sahi02@law.ac.uk">yourname@example.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/zaintariqsahi" target="_blank">linkedin.com/in/yourprofile</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/ZainTariqSahi" target="_blank">github.com/yourusername</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact me at <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <script>
+        function toggleDetails() {
+    const details = document.getElementById('hobby-details');
+    const toggle = document.querySelector('.toggle');
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        toggle.textContent = 'Show less...';
+    } else {
+        details.style.display = 'none';
+        toggle.textContent = 'Show more...';
+    }
+}
+
+    </script>
+</body>
+</html>
